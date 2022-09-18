@@ -1,0 +1,28 @@
+{
+    "_comment1": "Base-AMI",
+    "builders": [
+        {
+            "type": "amazon-ebs",
+            "region": "us-east-1",
+            "source_ami": "ami-08d4ac5b634553e16",
+            "instance_type": "t2.micro",
+            "vpc_id": "vpc-07d0c0050cad2836a",
+            "subnet_id": "subnet-0882f799e47d9f14e",
+            "ssh_username": "ubunut",
+            "ami_name": "Packer-AMI",
+            "tags": {
+                "Name": "Packer-AMI"
+            }
+        }
+    ],
+    "provisioners": [
+        {
+            "type": "shell",
+            "inline": [
+                "sleep 10s",
+                "sudo apt update",
+                "sudo apt install -y unzip nginx"
+            ]
+        }
+    ]
+}

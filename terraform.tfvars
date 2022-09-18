@@ -1,0 +1,9 @@
+aws_region    = "us-east-1"
+vpc_name      = "My-VPC"
+cidr_block    = "10.1.0.0/16"
+azs           = ["us-east-1a", "us-east-1b", "us-east-1c"]
+pub_cidrs     = ["10.1.1.0/24", "10.1.2.0/24", "10.1.3.0/24"]
+private_cidrs = ["10.1.10.0/24", "10.1.20.0/24", "10.1.30.0/24"]
+ami_id        = "ami-08d4ac5b634553e16"
+ec2_type      = "t2.micro"
+key           = "AWS"
